@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import * as React from 'react';
-import { MainLayout, EmptyLayout, AdminLayout } from './components/layout';
+import { MainLayout } from './components/layout';
 
 export interface IAboutProps {}
 

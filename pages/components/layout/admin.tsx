@@ -1,4 +1,4 @@
-import { LayoutProps } from 'models/common';
+import { LayoutProps } from 'models';
 import Link from 'next/link';
 
 export function AdminLayout({ children }: LayoutProps) {
