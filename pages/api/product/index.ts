@@ -5,9 +5,13 @@ type Data = {
 	name: string;
 };
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
 	if (req.method !== 'GET') {
 		res.status(404).json({ name: 'method not supported' });
 	}
-	res.status(200).json({ name: 'get list of product' });
+
+    const response = await fetch('https://js-post-api.herokuapp.com/api/posts?_page=1');
+    const responseJSON = await response.json();
+    
+	res.status(200).json({ name: responseJSON });
 }
