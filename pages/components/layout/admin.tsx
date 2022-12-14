@@ -1,7 +1,7 @@
 import { LayoutProps } from 'models';
 import Link from 'next/link';
 
-export function AdminLayout({ children }: LayoutProps) {
+export default function AdminLayout({ children }: LayoutProps) {
 	return (
 		<>
 			<div>
